@@ -1,5 +1,17 @@
 # @tanstack/start-plugin-core
 
+## 1.171.55
+
+### Patch Changes
+
+- [#8758](https://github.com/TanStack/router/pull/8758) [`d9b07e8`](https://github.com/TanStack/router/commit/d9b07e8d3b724cdbfac0aa2fba4c1f7a3a241100) - Stop resolving top-level calls such as `z.object()` whose receiver is not a namespace import. They can never be a `createServerOnlyFn` or `createClientOnlyFn` call, and resolving them made the dev compiler load and parse the receiver's module (all of zod, for example).
+
+- Updated dependencies [[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c), [`647cb73`](https://github.com/TanStack/router/commit/647cb737a5622813d276d6042766692ca5ae67ed)]:
+  - @tanstack/router-core@1.171.39
+  - @tanstack/router-plugin@1.168.48
+  - @tanstack/start-server-core@1.169.45
+  - @tanstack/router-generator@1.167.46
+
 ## 1.171.54
 
 ### Patch Changes
